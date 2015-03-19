@@ -71,7 +71,7 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Forces xfce-term to use 256 colors
-if [ $COLORTERM = "xfce4-terminal" ] && [ -e /usr/share/terminfo/x/xterm-256color ] ; then 
+if [ $COLORTERM="xfce4-terminal" ] && [ -e /usr/share/terminfo/x/xterm-256color ] ; then 
     export TERM=xterm-256color
 fi
 
@@ -81,5 +81,5 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
