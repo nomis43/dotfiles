@@ -76,10 +76,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Forces xfce-term to use 256 colors
 
-if [ "$COLORTERM" == "xfce4-terminal" ] && [ -e /usr/share/terminfo/x/xterm-256color ] ; then 
-
-    export TERM=xterm-256color
-fi
+# if [ "$COLORTERM" == "xfce4-terminal" ] && [ -e /usr/share/terminfo/x/xterm-256color ] ; # # then 
+#    export TERM=xterm-256color
+# fi
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
