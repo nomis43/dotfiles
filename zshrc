@@ -49,7 +49,11 @@ plugins=(git extract colorize colored-man zsh-syntax-highlighting)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
+# Path to my Golang workspace
+
+export GOPATH="/home/simon/Documents/Projets/go"
+export RUBYPATH="/home/simon/.gem/ruby/2.2.0/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$GOPATH/bin:$RUBYPATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -82,4 +86,8 @@ fi
 #
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+source alias_iut.zsh
+
+alias java8="/usr/lib/jvm/java-8-openjdk/jre/bin/java"
+alias switchen="setxkbmap en_US"
+alias switchfr="setxkbmap fr"
