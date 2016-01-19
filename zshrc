@@ -49,7 +49,11 @@ plugins=(git extract colorize colored-man zsh-syntax-highlighting)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
+# Path to my Golang workspace
+
+export GOPATH="/home/simon/Documents/Projets/go"
+export RUBYPATH="/home/simon/.gem/ruby/2.2.0/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$GOPATH/bin:$RUBYPATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -71,7 +75,9 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Forces xfce-term to use 256 colors
+
 if [ "$COLORTERM" == "xfce4-terminal" ] && [ -e /usr/share/terminfo/x/xterm-256color ] ; then 
+
     export TERM=xterm-256color
 fi
 
@@ -81,5 +87,9 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+source alias_iut.zsh
+
+alias java8="/usr/lib/jvm/java-8-openjdk/jre/bin/java"
+alias switchen="setxkbmap en_US"
+alias switchfr="setxkbmap fr"
