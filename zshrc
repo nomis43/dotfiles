@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/simon/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. (random for random theme each time)
 ZSH_THEME="ys"
@@ -24,8 +24,8 @@ plugins=(git extract colorize colored-man zsh-syntax-highlighting)
 export GOPATH="/home/simon/Documents/Projets/go"
 # Path to Ruby installed gems 
 export RUBYPATH="/home/simon/.gem/ruby/2.2.0/bin"
-
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$GOPATH/bin:$RUBYPATH"
+export PATH="/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$GOPATH/bin:$RUBYPATH"
+# export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -44,8 +44,9 @@ elif [ -e /bin/vim ] ; then
 fi
 
 alias zshconfig="vim ~/.zshrc"
+# source alias_iut.zsh
 
 # Load aliases for quick connection via RDP
-source $HOME/dotfiles/alias_iut.zsh
+# source $HOME/dotfiles/alias_iut.zsh
 
 # alias java8="/usr/lib/jvm/java-8-openjdk/jre/bin/java"
