@@ -20,10 +20,13 @@ plugins=(git extract colorize colored-man zsh-syntax-highlighting)
 
 # User configuration
 
+export EDITOR="nvim"
+
 # Path to GOLANG workspace
-export GOPATH="/home/simon/Documents/Projets/go"
+export GOPATH="$HOME/Documents/Projets/go"
+export GOBIN="$GOPATH/bin"
 # Path to Ruby installed gems 
-export RUBYPATH="/home/simon/.gem/ruby/2.2.0/bin"
+export RUBYPATH="$HOME/.gem/ruby/2.3.0/bin"
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$GOPATH/bin:$RUBYPATH"
 
@@ -44,8 +47,12 @@ elif [ -e /bin/vim ] ; then
 fi
 
 alias zshconfig="vim ~/.zshrc"
+alias ip6on="sudo sysctl -w net.ipv6.conf.all.disable_ipv6=0"
+alias ip6off="sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1"
+
 
 # Load aliases for quick connection via RDP
 source $HOME/dotfiles/alias_iut.zsh
+source $HOME/dotfiles/dockerfuncs.sh
 
 # alias java8="/usr/lib/jvm/java-8-openjdk/jre/bin/java"
