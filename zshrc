@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/simon/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. (random for random theme each time)
 ZSH_THEME="ys"
@@ -28,7 +28,7 @@ export GOBIN="$GOPATH/bin"
 # Path to Ruby installed gems 
 export RUBYPATH="$HOME/.gem/ruby/2.3.0/bin"
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$GOPATH/bin:$RUBYPATH"
+export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$GOPATH/bin:$RUBYPATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -50,9 +50,5 @@ alias zshconfig="vim ~/.zshrc"
 alias ip6on="sudo sysctl -w net.ipv6.conf.all.disable_ipv6=0"
 alias ip6off="sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1"
 
-
-# Load aliases for quick connection via RDP
-source $HOME/dotfiles/alias_iut.zsh
-source $HOME/dotfiles/dockerfuncs.sh
 
 # alias java8="/usr/lib/jvm/java-8-openjdk/jre/bin/java"
