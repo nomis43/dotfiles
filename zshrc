@@ -27,7 +27,7 @@ export GOPATH="$HOME/Documents/Projets/go"
 export GOBIN="$GOPATH/bin"
 # Path to Ruby installed gems 
 export RUBYPATH="$HOME/.gem/ruby/2.3.0/bin"
-
+export ANDROID_HOME="$HOME/Apps/android-sdk"
 export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$GOPATH/bin:$RUBYPATH"
 
 source $ZSH/oh-my-zsh.sh

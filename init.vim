@@ -17,6 +17,8 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/seoul256.vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Valloric/YouCompleteMe', {'for': ['cpp', 'c', 'go', 'py']}
+Plug 'fatih/vim-go'
+
 
 call plug#end()
 
