@@ -50,5 +50,9 @@ alias zshconfig="vim ~/.zshrc"
 alias ip6on="sudo sysctl -w net.ipv6.conf.all.disable_ipv6=0"
 alias ip6off="sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1"
 
+export CCACHE_DIR="$HOME/.ccache"
+export CC="ccache gcc"
+export CXX="ccache g++"
+export PATH="/usr/lib/ccache:$PATH"
 
 # alias java8="/usr/lib/jvm/java-8-openjdk/jre/bin/java"
