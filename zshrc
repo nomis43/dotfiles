@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/simon/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -49,7 +49,11 @@ plugins=(git extract colorize colored-man zsh-syntax-highlighting)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
+# GOLANG PATH CONFIG
+export GOPATH="$HOME/Projets/go"
+export GOBIN="$GOPATH/bin"
+export RUBYBIN="$HOME/.gem/ruby/2.2.0/bin"
+export PATH="/bin:/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$GOPATH/bin:$RUBYBIN"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -70,8 +74,8 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# Forces xfce-term to use 256 colors
-if [ $COLORTERM = "xfce4-terminal" ] && [ -e /usr/share/terminfo/x/xterm-256color ] ; then 
+# Forces terminal emulator to use 256 colors if possible
+if [ -e /usr/share/terminfo/x/xterm-256color ] ; then
     export TERM=xterm-256color
 fi
 
@@ -83,3 +87,18 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# alias steam="LD_PRELOAD='/usr/lib32/libstdc++.so.6 /usr/lib32/libgcc_s.so.l /usr/lib32/libscb.so.l' steam"
+
+if [ -e "/bin/nvim" ] ; then
+    alias vim="nvim"
+    alias vi="nvim"
+elif [ -e "/bin/vim" ] ; then
+    alias vi="vim"
+fi
+
+# STEAM ARCHLINUX FIX
+
+function steamfix {
+    find ~/.steam/root/ \( -name "libgcc_s.so*" -o -name "libstdc++.so*" -o -name "libxcb.so*" \) -print -delete
+}
